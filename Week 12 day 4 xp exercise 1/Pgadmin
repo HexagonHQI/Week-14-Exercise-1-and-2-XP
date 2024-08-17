@@ -1,0 +1,16 @@
+-- Table: public.blog_platform
+
+-- DROP TABLE IF EXISTS public.blog_platform;
+
+CREATE TABLE IF NOT EXISTS public.blog_platform
+(
+    id integer NOT NULL DEFAULT nextval('blog_platform_id_seq'::regclass),
+    title character varying(225) COLLATE pg_catalog."default" NOT NULL,
+    content text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT blog_platform_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.blog_platform
+    OWNER to postgres;
